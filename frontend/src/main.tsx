@@ -237,7 +237,7 @@ function Table({ data, emptyMessage }: { data: any[]; emptyMessage: string }) {
 }
 
 function formatColumn(column: string) {
-  return column.replaceAll('_', ' ').replace(/\b\w/g, letter => letter.toUpperCase());
+ return column.replace(/_/g, ' ').replace(/\b\w/g, (letter: string) => letter.toUpperCase());
 }
 
 function formatValue(value: any) {
